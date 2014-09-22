@@ -4,106 +4,8 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "a101d555d1b124847dd4ea89dc57fa4a",
+    "hash": "abcf574512d5c82eb3294d809c0503cf",
     "packages": [
-        {
-            "name": "drupal/admin_menu",
-            "version": "7.3.0-rc4",
-            "source": {
-                "type": "git",
-                "url": "http://git.drupal.org/project/admin_menu",
-                "reference": "fc307c1abcbb035ddb88371d7e05810358ecf5ae"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "http://ftp.drupal.org/files/projects/admin_menu-7.x-3.0-rc4.zip",
-                "reference": null,
-                "shasum": null
-            },
-            "require": {
-                "drupal/drupal": "7.*",
-                "drupal/system": ">7.7.10"
-            },
-            "replace": {
-                "drupal/admin_devel": "self.version",
-                "drupal/admin_menu_toolbar": "self.version"
-            },
-            "type": "drupal-module",
-            "extra": {
-                "branch-alias": {
-                    "dev-7.x-3.x": "7.3.x-dev"
-                }
-            },
-            "description": "Provides a dropdown menu to most administrative tasks and other common destinations (to users with the proper permissions)."
-        },
-        {
-            "name": "drupal/advanced_help",
-            "version": "7.1.1",
-            "source": {
-                "type": "git",
-                "url": "http://git.drupal.org/project/advanced_help",
-                "reference": "e5c25ae431f03a6c6146a581d739f1a0048175db"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "http://ftp.drupal.org/files/projects/advanced_help-7.x-1.1.zip",
-                "reference": null,
-                "shasum": null
-            },
-            "require": {
-                "drupal/drupal": "7.*"
-            },
-            "replace": {
-                "drupal/help_example": "self.version"
-            },
-            "type": "drupal-module",
-            "extra": {
-                "branch-alias": {
-                    "dev-7.x-1.x": "7.1.x-dev"
-                }
-            },
-            "description": "Allow advanced help and documentation."
-        },
-        {
-            "name": "drupal/ctools",
-            "version": "7.1.4",
-            "source": {
-                "type": "git",
-                "url": "http://git.drupal.org/project/ctools",
-                "reference": "5438b40dbe532af6a7eca891c86eaef845bff945"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "http://ftp.drupal.org/files/projects/ctools-7.x-1.4.zip",
-                "reference": null,
-                "shasum": null
-            },
-            "require": {
-                "drupal/advanced_help": "7.*",
-                "drupal/color": "7.*",
-                "drupal/drupal": "7.*",
-                "drupal/panels": "7.*",
-                "drupal/views": "7.*"
-            },
-            "replace": {
-                "drupal/bulk_export": "self.version",
-                "drupal/ctools_access_ruleset": "self.version",
-                "drupal/ctools_ajax_sample": "self.version",
-                "drupal/ctools_custom_content": "self.version",
-                "drupal/ctools_plugin_example": "self.version",
-                "drupal/page_manager": "self.version",
-                "drupal/stylizer": "self.version",
-                "drupal/term_depth": "self.version",
-                "drupal/views_content": "self.version"
-            },
-            "type": "drupal-module",
-            "extra": {
-                "branch-alias": {
-                    "dev-7.x-1.x": "7.1.x-dev"
-                }
-            },
-            "description": "A library of helpful tools by Merlin of Chaos."
-        },
         {
             "name": "drupal/drupal",
             "version": "7.28.0",
@@ -177,231 +79,6 @@
                 }
             },
             "description": "Handles general site configuration for administrators."
-        },
-        {
-            "name": "drupal/features",
-            "version": "7.2.0",
-            "source": {
-                "type": "git",
-                "url": "http://git.drupal.org/project/features",
-                "reference": "78772d50b2619c5df97a7742f2b74aefea35ecb2"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "http://ftp.drupal.org/files/projects/features-7.x-2.0.zip",
-                "reference": null,
-                "shasum": null
-            },
-            "require": {
-                "drupal/drupal": "7.*"
-            },
-            "type": "drupal-module",
-            "extra": {
-                "branch-alias": {
-                    "dev-7.x-2.x": "7.2.x-dev"
-                }
-            },
-            "description": "Provides feature management for Drupal."
-        },
-        {
-            "name": "drupal/i18n",
-            "version": "7.1.5",
-            "source": {
-                "type": "git",
-                "url": "http://git.drupal.org/project/i18n",
-                "reference": "203b604fc0a24ad1ee81cfdf094c8e0340ca23a3"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "http://ftp.drupal.org/files/projects/i18n-7.x-1.5.zip",
-                "reference": null,
-                "shasum": null
-            },
-            "require": {
-                "drupal/block": "7.*",
-                "drupal/contact": "7.*",
-                "drupal/drupal": "7.*",
-                "drupal/field": "7.*",
-                "drupal/forum": "7.*",
-                "drupal/locale": "7.*",
-                "drupal/menu": "7.*",
-                "drupal/taxonomy": "7.*",
-                "drupal/translation": "7.*",
-                "drupal/variable": "7.*",
-                "drupal/variable_realm": "7.*",
-                "drupal/variable_store": "7.*"
-            },
-            "replace": {
-                "drupal/i18n_block": "self.version",
-                "drupal/i18n_contact": "self.version",
-                "drupal/i18n_field": "self.version",
-                "drupal/i18n_forum": "self.version",
-                "drupal/i18n_menu": "self.version",
-                "drupal/i18n_node": "self.version",
-                "drupal/i18n_path": "self.version",
-                "drupal/i18n_redirect": "self.version",
-                "drupal/i18n_select": "self.version",
-                "drupal/i18n_string": "self.version",
-                "drupal/i18n_sync": "self.version",
-                "drupal/i18n_taxonomy": "self.version",
-                "drupal/i18n_translation": "self.version",
-                "drupal/i18n_variable": "self.version"
-            },
-            "type": "drupal-module",
-            "extra": {
-                "branch-alias": {
-                    "dev-7.x-1.x": "7.1.x-dev"
-                }
-            },
-            "description": "Extends Drupal support for multilingual features."
-        },
-        {
-            "name": "drupal/module_filter",
-            "version": "7.2.0-alpha2",
-            "source": {
-                "type": "git",
-                "url": "http://git.drupal.org/project/module_filter",
-                "reference": "08b943f0bf89bc3c9960f40297ac632842907cd9"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "http://ftp.drupal.org/files/projects/module_filter-7.x-2.0-alpha2.zip",
-                "reference": null,
-                "shasum": null
-            },
-            "require": {
-                "drupal/drupal": "7.*"
-            },
-            "type": "drupal-module",
-            "extra": {
-                "branch-alias": {
-                    "dev-7.x-2.x": "7.2.x-dev"
-                }
-            },
-            "description": "Filter the modules list."
-        },
-        {
-            "name": "drupal/panels",
-            "version": "7.3.4",
-            "source": {
-                "type": "git",
-                "url": "http://git.drupal.org/project/panels",
-                "reference": "18319cd13a1c25a91e62f297d9367776956ac8d2"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "http://ftp.drupal.org/files/projects/panels-7.x-3.4.zip",
-                "reference": null,
-                "shasum": null
-            },
-            "require": {
-                "drupal/ctools": ">=7.1.4",
-                "drupal/drupal": "7.*",
-                "drupal/i18n": "7.*",
-                "drupal/i18n_string": "7.*",
-                "drupal/i18n_translation": "7.*"
-            },
-            "replace": {
-                "drupal/i18n_panels": "self.version",
-                "drupal/panels_ipe": "self.version",
-                "drupal/panels_mini": "self.version",
-                "drupal/panels_node": "self.version"
-            },
-            "type": "drupal-module",
-            "extra": {
-                "branch-alias": {
-                    "dev-7.x-3.x": "7.3.x-dev"
-                }
-            },
-            "description": "Core Panels display functions; provides no external UI, at least one other Panels module should be enabled."
-        },
-        {
-            "name": "drupal/strongarm",
-            "version": "7.2.0",
-            "source": {
-                "type": "git",
-                "url": "http://git.drupal.org/project/strongarm",
-                "reference": "895016eb5b99b9dc3e704f1b56e58808eedce30a"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "http://ftp.drupal.org/files/projects/strongarm-7.x-2.0.zip",
-                "reference": null,
-                "shasum": null
-            },
-            "require": {
-                "drupal/ctools": "7.*",
-                "drupal/drupal": "7.*"
-            },
-            "type": "drupal-module",
-            "extra": {
-                "branch-alias": {
-                    "dev-7.x-2.x": "7.2.x-dev"
-                }
-            },
-            "description": "Enforces variable values defined by modules that need settings set to operate properly."
-        },
-        {
-            "name": "drupal/variable",
-            "version": "7.2.5",
-            "source": {
-                "type": "git",
-                "url": "http://git.drupal.org/project/variable",
-                "reference": "83c00d0daed27175cd8de9134dd047e617bcedf0"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "http://ftp.drupal.org/files/projects/variable-7.x-2.5.zip",
-                "reference": null,
-                "shasum": null
-            },
-            "require": {
-                "drupal/drupal": "7.*",
-                "drupal/views": "7.*"
-            },
-            "replace": {
-                "drupal/variable_admin": "self.version",
-                "drupal/variable_example": "self.version",
-                "drupal/variable_realm": "self.version",
-                "drupal/variable_store": "self.version",
-                "drupal/variable_views": "self.version"
-            },
-            "type": "drupal-module",
-            "extra": {
-                "branch-alias": {
-                    "dev-7.x-2.x": "7.2.x-dev"
-                }
-            },
-            "description": "Variable Information and basic variable API"
-        },
-        {
-            "name": "drupal/views",
-            "version": "7.3.8",
-            "source": {
-                "type": "git",
-                "url": "http://git.drupal.org/project/views",
-                "reference": "dd711929f95788e32a15b3d19fb32c0c7c0a263d"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "http://ftp.drupal.org/files/projects/views-7.x-3.8.zip",
-                "reference": null,
-                "shasum": null
-            },
-            "require": {
-                "drupal/ctools": "7.*",
-                "drupal/drupal": "7.*"
-            },
-            "replace": {
-                "drupal/views_ui": "self.version"
-            },
-            "type": "drupal-module",
-            "extra": {
-                "branch-alias": {
-                    "dev-7.x-3.x": "7.3.x-dev"
-                }
-            },
-            "description": "Create customized lists and queries from your database."
         },
         {
             "name": "drush/drush",
@@ -494,16 +171,13 @@
                     "Drupal\\Settings\\": "src/"
                 }
             },
+            "notification-url": "https://packagist.org/downloads/",
             "authors": [
                 {
                     "name": "Will Milton",
                     "email": "wa.milton@gmail.com"
                 }
             ],
-            "support": {
-                "source": "https://github.com/winmillwill/settings_compile/tree/1.0.4",
-                "issues": "https://github.com/winmillwill/settings_compile/issues"
-            },
             "time": "2014-05-08 21:25:13"
         }
     ],
@@ -958,36 +632,6 @@
                 "zombie"
             ],
             "time": "2013-04-13 23:52:11"
-        },
-        {
-            "name": "drupal/devel",
-            "version": "7.1.5",
-            "source": {
-                "type": "git",
-                "url": "http://git.drupal.org/project/devel",
-                "reference": "becb6ca3ced27872b941b30ca308da03a209425a"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "http://ftp.drupal.org/files/projects/devel-7.x-1.5.zip",
-                "reference": null,
-                "shasum": null
-            },
-            "require": {
-                "drupal/drupal": "7.*",
-                "drupal/menu": "7.*"
-            },
-            "replace": {
-                "drupal/devel_generate": "self.version",
-                "drupal/devel_node_access": "self.version"
-            },
-            "type": "drupal-module",
-            "extra": {
-                "branch-alias": {
-                    "dev-7.x-1.x": "7.1.x-dev"
-                }
-            },
-            "description": "Various blocks, pages, and functions for developers."
         },
         {
             "name": "drupal/drupal-extension",
@@ -2975,9 +2619,7 @@
     ],
     "minimum-stability": "stable",
     "stability-flags": {
-        "drush/drush": 20,
-        "drupal/admin_menu": 5,
-        "drupal/module_filter": 15
+        "drush/drush": 20
     },
     "prefer-stable": false,
     "platform": [

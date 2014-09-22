@@ -9,10 +9,6 @@
   }
   ],
   "repositories": [
-    {
-    "type": "vcs",
-    "url": "git@github.com:winmillwill/settings_compile"
-  },
   {
     "type": "composer",
     "url": "http://static.drupal-packagist.org/v0.1.0/"
@@ -21,16 +17,9 @@
   "require": {
     "winmillwill/settings_compile": "~1.0",
     "drupal/drupal": "~7.28",
-    "drush/drush": "6.*@dev",
-    "drupal/features": "~7.2.0",
-    "drupal/admin_menu": "~7.3.0-rc4",
-    "drupal/ctools": "~7.1.4",
-    "drupal/module_filter": "~7.2.0-alpha2",
-    "drupal/strongarm": "~7.2.0"
+    "drush/drush": "6.*@dev"
   },
   "require-dev": {
-    "drupal/drupal": "~7.28",
-    "drupal/devel": "~7.1.3",
     "drupal/drupal-extension": "v1.0.1",
     "behat/mink-zombie-driver": "*",
     "behat/mink-extension": "~1.2",
@@ -50,12 +39,6 @@
   "autoload-dev": {
     "psr-0": {
       "": "spec"
-    }
-  },
-  "extra": {
-    "installer-paths": {
-      "vendor/drupal/modules/{$name}": ["type:drupal-module"],
-      "vendor/drupal/themes/{$name}": ["type:drupal-theme"]
     }
   },
   "scripts": {

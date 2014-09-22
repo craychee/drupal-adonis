@@ -32,10 +32,6 @@ if [[ -d modules ]]; then
   ln -s ../../../modules www/sites/all/
 fi
 
-if [[ -d vendor/drupal/modules ]]; then
-  ln -s ../vendor/drupal/modules www/sites/all/modules/contrib
-fi
-
 if [[ ! -d files ]]; then
   mkdir files
 fi
