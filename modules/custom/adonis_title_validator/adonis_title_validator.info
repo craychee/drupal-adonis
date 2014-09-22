@@ -1,0 +1,3 @@
+name = adonis_title_validator
+core = 7.x
+files[] = TitleValidator.php

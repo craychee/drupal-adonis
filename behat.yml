@@ -1,0 +1,14 @@
+default:
+  paths:
+    features: 'acceptance'
+  extensions:
+    Behat\MinkExtension\Extension:
+      goutte: ~
+      selenium2:
+        wd_host: "http://localhost:8643/wd/hub"
+      base_url: http://adonis.dev
+    Drupal\DrupalExtension\Extension:
+      blackbox: ~
+      api_driver: 'drupal'
+      drupal:
+        drupal_root: 'www'

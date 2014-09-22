@@ -1,0 +1,18 @@
+{
+  "id": "default",
+  "databases": {
+    "default": {
+      "default": {
+        "username": "default",
+        "database": "default",
+        "password": "default",
+        "driver": "mysql",
+        "host": "localhost"
+      }
+    }
+  },
+  "uri": "default.net",
+  "doc_root": "www",
+  "chef_type": "data_bag_item",
+  "data_bag": "drupal"
+}

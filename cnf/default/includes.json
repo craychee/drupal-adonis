@@ -1,0 +1,5 @@
+{
+    "require": [
+        "$DRUPAL_ROOT/../vendor/autoload.php"
+    ]
+}

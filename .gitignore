@@ -1,0 +1,6 @@
+# Ignore vagrant and composer downloads
+vendor
+.vagrant
+bin/*
+!bin/drupal_init
+cnf/settings.php

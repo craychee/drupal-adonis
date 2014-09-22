@@ -1,0 +1,47 @@
+#! /bin/bash
+
+set -e
+
+top=$(dirname $0)/..
+pushd $top &>/dev/null
+base=$PWD
+settings=$base/www/sites/default/settings.php
+confd='cnf/default'
+
+if [[ -d www ]]; then
+  chmod -R +w www/sites/default
+fi
+
+rm -rf www
+case `uname -s` in
+  'Darwin')
+    xargs="xargs -L 1"
+    ;;
+  *)
+    xargs="xargs -r"
+    ;;
+esac
+find modules -type l | $xargs unlink
+
+cp -r vendor/drupal/drupal www
+rm -r www/sites/all/*
+
+bin/settings_compile $confd cnf/settings.php
+
+if [[ -d modules ]]; then
+  ln -s ../../../modules www/sites/all/
+fi
+
+if [[ -d vendor/drupal/modules ]]; then
+  ln -s ../vendor/drupal/modules www/sites/all/modules/contrib
+fi
+
+if [[ ! -d files ]]; then
+  mkdir files
+fi
+
+ln -s ../../../cnf/settings.php www/sites/default/
+ln -s ../../../files www/sites/default
+chmod -R g+w www/sites/default
+
+
