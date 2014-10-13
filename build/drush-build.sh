@@ -14,5 +14,6 @@ done
 drush="$base/bin/drush.php $drush_flags"
 
 pushd $base/www
-$drush si --site-name="Adonis" --account-pass=admin -y
+$drush si minimal --site-name="Adonis" --account-pass=admin -y
 $drush dis -y overlay shortcuts comments
+$drush en -y admin_menu module_filter features strongarm
