@@ -9,7 +9,7 @@
   }
   ],
   "repositories": [
-  {
+    {
     "type": "composer",
     "url": "http://static.drupal-packagist.org/v0.1.0/"
   }
@@ -17,7 +17,14 @@
   "require": {
     "winmillwill/settings_compile": "~1.0",
     "drupal/drupal": "~7.28",
-    "drush/drush": "6.*@dev"
+    "drush/drush": "6.*@dev",
+    "drupal/features": "~7.2.0",
+    "drupal/module_filter": "~7.2.0-alpha2",
+    "drupal/admin_menu": "~7.3.0-rc4",
+    "drupal/strongarm": "~7.2.0",
+    "drupal/views": "~7.3.8",
+    "drupal/tangler": "*",
+    "composer/composer": "1.0.*@dev"
   },
   "require-dev": {
     "drupal/drupal-extension": "v1.0.1",
@@ -42,8 +49,16 @@
     }
   },
   "scripts": {
-    "post-update-cmd": ["bin/drupal_init"],
-    "post-install-cmd": ["bin/drupal_init"]
+    "scripts": {
+      "post-install-cmd": [
+        "bin/drupal_init",
+        "Drupal\\Tangler\\ScriptHandler::postUpdate"
+      ],
+      "post-update-cmd": [
+        "bin/drupal_init",
+        "Drupal\\Tangler\\ScriptHandler::postUpdate"
+      ]
+    }
   },
   "minimum-stability": "stable"
 }
