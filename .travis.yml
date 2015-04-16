@@ -38,4 +38,4 @@ before_script:
 - build/install.sh
 - sudo chown -R travis:www-data www
 
-script: bin/behat -f pretty
+script: bin/behat --tags "~@phpspec" -f pretty
