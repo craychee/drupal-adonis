@@ -18,4 +18,3 @@ If you are here from said blog post or presentation, welcome. Hopefully you have
 ------------------
 
 1. Run `vagrant up` and if all went well, you can visit `adonis.dev` in your brower of choice.
-
