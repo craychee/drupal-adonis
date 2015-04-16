@@ -6,9 +6,10 @@ This is a demonstration of composer to manage dependencies in Drupal.
 
 ## Introduction
 
-I am **Michelle Krejci**, an engineer at [Palantir.net](http://palantir.net/).
-[@dev_meshev](https://twitter.com/dev_meshev)
-michellekrejci@gmail.com
+I am **Michelle Krejci**, an engineer at [Palantir.net](http://palantir.net/).  
+Find me at:  
+* [@dev_meshev](https://twitter.com/dev_meshev)
+* michellekrejci@gmail.com
 
 ## Agenda
 
@@ -24,7 +25,7 @@ michellekrejci@gmail.com
 * Documentation on [d.o](https://www.drupal.org/node/2471553)
 
 ## Credits:
-* [winmillwill](https://github.com/winmillwill)
+* [winmillwill](https://github.com/winmillwill) : un-song Drupal hero and workflow pioneer
 
 ## Building this thing: requirements
 
