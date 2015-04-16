@@ -1,0 +1,11 @@
+name = "Adonis Dependencies"
+description = "Base module for the Adonis project"
+package = "Adonis install"
+core = "7.x"
+
+; Contrib
+dependencies[] = registry_rebuild
+
+; Custom
+
+; Features
