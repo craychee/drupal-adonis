@@ -1,64 +1,50 @@
 {
-  "name": "palantirnet/adonis",
-  "license": "proprietary",
-  "description": "The prettiest Drupal workflow.",
-  "authors": [
-    {
-    "name": "Michelle Krejci",
-    "email": "krejci@palantir.net"
-  }
-  ],
-  "repositories": [
-    {
-    "type": "composer",
-    "url": "http://static.drupal-packagist.org/v0.1.0/"
-  }
-  ],
-  "require": {
-    "winmillwill/settings_compile": "~1.0",
-    "drupal/drupal": "~7.28",
-    "drush/drush": "6.*@dev",
-    "drupal/features": "~7.2.0",
-    "drupal/module_filter": "~7.2.0-alpha2",
-    "drupal/admin_menu": "~7.3.0-rc4",
-    "drupal/strongarm": "~7.2.0",
-    "drupal/views": "~7.3.8",
-    "drupal/tangler": "*",
-    "composer/composer": "1.0.*@dev"
-  },
-  "require-dev": {
-    "drupal/drupal-extension": "v1.0.1",
-    "behat/mink-zombie-driver": "*",
-    "behat/mink-extension": "~1.2",
-    "behat/behat": "2.5.2",
-    "phpunit/phpunit": "*",
-    "phpspec/phpspec": "~2.0"
-  },
-  "config": {
-    "bin-dir": "bin/",
-    "process-timeout": 1200
-  },
-  "autoload": {
-    "psr-0": {
-      "Adonis\\": "src/"
+    "minimum-stability": "alpha",
+    "name": "craychee/adonis",
+    "license": "MIT",
+    "description": "The prettiest Drupal workflow.",
+    "repositories": [
+        {
+        "type": "composer",
+        "url": "http://packagist.drupal-composer.org/"
     }
-  },
-  "autoload-dev": {
-    "psr-0": {
-      "": "spec"
-    }
-  },
-  "scripts": {
+    ],
+    "require": {
+        "behat/behat": "3.0.*@dev",
+        "composer/composer": "~1.0@alpha",
+        "drupal/admin_menu": "~7.3@RC",
+        "drupal/drupal": "7.*",
+        "drupal/features": "~7.2",
+        "drupal/module_filter": "~7.2@alpha",
+        "drupal/tangler": "*",
+        "drush/drush": "6.*",
+        "winmillwill/settings_compile": "~2.1.1"
+    },
+    "require-dev": {
+        "behat/behat": "3.0.*@dev",
+        "drupal/drupal-extension": "3.0.*",
+        "phpspec/phpspec": "~2.0"
+    },
+    "config": {
+        "bin-dir": "bin"
+    },
+    "autoload": {
+        "psr-0": {
+            "": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-0": {
+            "": "spec"
+        }
+    },
     "scripts": {
-      "post-install-cmd": [
-        "bin/drupal_init",
-        "Drupal\\Tangler\\ScriptHandler::postUpdate"
-      ],
-      "post-update-cmd": [
-        "bin/drupal_init",
-        "Drupal\\Tangler\\ScriptHandler::postUpdate"
-      ]
-    }
-  },
-  "minimum-stability": "stable"
+        "post-install-cmd": [
+            "bin/wrapper"
+        ],
+        "post-update-cmd": [
+            "bin/wrapper"
+        ]
+    },
+    "type": "project"
 }

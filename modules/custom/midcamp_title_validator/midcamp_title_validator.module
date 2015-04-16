@@ -1,0 +1,19 @@
+<?php
+/**
+ * @file
+ * @copyright (C) Copyright 2015 Palantir.net
+ */
+function midcamp_title_validator_form_node_form_alter(&$form, &$form_state, $form_id) {
+  $form['#validate'][] = 'midcamp_validation_invoke';
+}
+
+function midcamp_validation_invoke($form, &$form_state) {
+  $title = $form_state['input']['title'];
+  $validator = new TitleValidator();
+  try {
+    $validator->checkClean($title);
+  }
+  catch (Exception $e) {
+    form_set_error('clean title', t('Nope.'));
+  }
+}

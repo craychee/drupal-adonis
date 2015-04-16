@@ -1,0 +1,10 @@
+name = "Adonis Dependencies"
+description = "Base module for the Adonis project"
+package = "Adonis install"
+core = "7.x"
+
+; Contrib
+
+; Custom
+
+; Features
