@@ -12,13 +12,12 @@
     "require": {
         "behat/behat": "3.0.*@dev",
         "composer/composer": "~1.0@alpha",
-        "drupal/drupal": "~7.*",
-        "drush/drush": "6.*",
-        "drupal/features": "~7.2.0",
-        "drupal/module_filter": "~7.2.0-alpha2",
-        "drupal/admin_menu": "~7.3.0-rc4",
-        "drupal/strongarm": "~7.2.0",
+        "drupal/admin_menu": "~7.3@RC",
+        "drupal/drupal": "7.*",
+        "drupal/features": "~7.2",
+        "drupal/module_filter": "~7.2@alpha",
         "drupal/tangler": "*",
+        "drush/drush": "6.*",
         "winmillwill/settings_compile": "~2.1.1"
     },
     "require-dev": {
