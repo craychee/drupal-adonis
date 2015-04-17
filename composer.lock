@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "54e27d0aa000236feb7e0a1752b3e391",
+    "hash": "8aebde1113252925ee230113a3874ac7",
     "packages": [
         {
             "name": "behat/behat",
@@ -385,6 +385,32 @@
             },
             "notification-url": "http://packagist.drupal-composer.org/downloads/",
             "description": "Handles general site configuration for administrators."
+        },
+        {
+            "name": "drupal/features",
+            "version": "7.2.5",
+            "source": {
+                "type": "git",
+                "url": "http://git.drupal.org/project/features",
+                "reference": "14fa81e5c4c6016a33484d147d59bd5033619875"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "http://ftp.drupal.org/files/projects/features-7.x-2.5.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "drupal/drupal": "7.*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-7.x-2.x": "7.2.x-dev"
+                }
+            },
+            "notification-url": "http://packagist.drupal-composer.org/downloads/",
+            "description": "Provides feature management for Drupal."
         },
         {
             "name": "drupal/module_filter",

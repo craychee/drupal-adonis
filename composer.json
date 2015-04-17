@@ -14,6 +14,7 @@
         "composer/composer": "~1.0@alpha",
         "drupal/admin_menu": "~7.3@RC",
         "drupal/drupal": "7.*",
+        "drupal/features": "7.*",
         "drupal/module_filter": "~7.2@alpha",
         "drupal/tangler": "*",
         "drush/drush": "6.*",
