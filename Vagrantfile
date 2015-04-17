@@ -4,7 +4,7 @@ Vagrant.configure("2") do |config|
   project     = 'adonis'
   path        = "/var/www/sites/#{project}.dev"
 
-  config.vm.box     = "craychee/ubuntu-drupal"
+  config.vm.box     = "craychee/drupal-ubuntu"
 
   config.vm.synced_folder ".", "/vagrant", :disabled => true
   config.vm.synced_folder ".", path, :nfs => true
