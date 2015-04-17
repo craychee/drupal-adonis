@@ -1,12 +1,33 @@
-# Drupal Adonis
+# Composer Like a Boss
 
-## These are not the droids you are looking for.
+## Welcome Drupal414!
 
-This is a sandbox of ideas. This is a repository for demonstration purposes and a reference point for blog posts. A better explaination of ideas will be forthcoming.
+This is a demonstration of composer to manage dependencies in Drupal.
 
-If you are here from said blog post or presentation, welcome. Hopefully you have more context.
+## Introduction
 
-## Requirements
+I am **Michelle Krejci**, an engineer at [Palantir.net](http://palantir.net/).  
+Find me at:  
+* [@dev_meshev](https://twitter.com/dev_meshev)
+* michellekrejci@gmail.com
+
+## Agenda
+
+1. An introduction to the problem: managing dependencies
+2. Drush make as a solution to this problem.
+3. Composer as a better solution to this problem.
+4. Demo
+5. A call to a revolution OR: how composer creates the mental shift we as developers should all make
+
+## Resources
+* [drupal-composer/drupal-project](https://github.com/drupal-composer/drupal-project)
+* [drupal-composer/drupal-packagist](https://github.com/drupal-composer/drupal-packagist)
+* Documentation on [d.o](https://www.drupal.org/node/2471553)
+
+## Credits:
+* [winmillwill](https://github.com/winmillwill) : un-song Drupal hero and workflow pioneer
+
+## Building this thing: requirements
 
 ------------
 * [virtualBox](https://www.virtualbox.org/wiki/Downloads) >= 4.3.x
