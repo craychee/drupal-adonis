@@ -1,4 +1,5 @@
 # Drupal Adonis
+[![Build Status](https://travis-ci.org/craychee/drupal-adonis.svg?branch=meetup-mke-composer)](https://travis-ci.org/craychee/drupal-adonis)
 
 ## These are not the droids you are looking for.
 
