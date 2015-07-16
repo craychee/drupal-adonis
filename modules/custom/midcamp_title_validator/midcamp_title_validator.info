@@ -1,3 +1,0 @@
-name = midcamp title validator
-core = 7.x
-files[] = TitleValidator.php
