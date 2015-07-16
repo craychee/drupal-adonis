@@ -1,0 +1,38 @@
+machine:
+  php:
+    version: 5.5.21
+  hosts:
+    adonis.dev: 127.0.0.1
+
+dependencies:
+  pre:
+    - composer config --global github-oauth.github.com $GITHUB_TOKEN
+    - cp $HOME/$CIRCLE_PROJECT_REPONAME/cnf/circle.conf /etc/apache2/sites-available/default
+    - sudo sed -e "s?%HOME%?$(pwd)?g" --in-place /etc/apache2/sites-available/default
+    - sudo sed -e "s?%PROJECT_DIR%?www?g" --in-place /etc/apache2/sites-available/default
+    - echo "sendmail_path=/bin/true" >> ~/.phpenv/versions/$(phpenv version-name)/etc/php.ini
+    - sudo a2enmod rewrite
+    - sudo service apache2 restart
+    - cp cnf/config.yml.circle cnf/config.yml
+    - mysql -u ubuntu -e 'create database adonis;'
+    - sudo service mysql restart
+  override:
+    - composer install --prefer-dist
+  post:
+    - cp env.dist .env
+    - source env.dist
+    - sudo chown -R $(whoami):www-data www
+    - build/install.sh
+
+test:
+  override:
+      - bin/behat
+
+deployment:
+  pantheon:
+    branch: master
+    commands:
+      - composer install --no-dev --no-scripts
+      - bin/deploy
+      - mysqldump -u ubuntu adonis > adonis.sql
+      - mysql -u pantheon -p$PANTHEON_DB_PASS -h $PANTHEON_DB_HOST -P 17898 pantheon < adonis.sql

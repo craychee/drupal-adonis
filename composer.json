@@ -1,22 +1,40 @@
 {
     "minimum-stability": "alpha",
     "name": "craychee/adonis",
-    "license": "MIT",
     "description": "The prettiest Drupal workflow.",
     "repositories": [
         {
-        "type": "composer",
-        "url": "http://packagist.drupal-composer.org/"
-    }
+            "type": "composer",
+            "url": "http://packagist.drupal-composer.org/"
+        },
+        {
+            "type": "package",
+            "package": {
+                "name": "pantheon-systems/drops-7",
+                "type": "drupal-core",
+                "version": "7.38",
+                "source": {
+                    "url": "https://github.com/pantheon-systems/drops-7.git",
+                    "type": "git",
+                    "reference": "master"
+                },
+                "replace": {
+                    "drupal/drupal": "self.version",
+                    "drupal/field": "self.version",
+                    "drupal/file": "self.version",
+                    "drupal/system": "self.version",
+                    "drupal/path": "self.version"
+                }
+            }
+        }
     ],
     "require": {
-        "behat/behat": "3.0.*@dev",
+        "pantheon-systems/drops-7": "7.*",
         "composer/composer": "~1.0@alpha",
         "drupal/admin_menu": "~7.3@RC",
-        "drupal/drupal": "7.*",
         "drupal/features": "~7.2",
         "drupal/module_filter": "~7.2@alpha",
-        "drupal/tangler": "*",
+        "craychee/rootcanal": "0.1.*",
         "drush/drush": "6.*",
         "winmillwill/settings_compile": "~2.1.1"
     },
