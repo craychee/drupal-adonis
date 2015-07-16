@@ -6,5 +6,5 @@ if(!file_exists('cnf/config.yml')) {
   echo "File config.yml copied to cnf directory\n\n";
 }
 $path = __DIR__ . "/../";
-exec($path . "vendor/winmillwill/settings_compile/bin/settings_compile cnf/config.yml cnf/settings.php");
-exec($path . "vendor/drupal/tangler/bin/drupal_tangle");
+exec($path . "bin/settings_compile cnf/config.yml cnf/settings.php");
+exec($path . "bin/rootcanal");

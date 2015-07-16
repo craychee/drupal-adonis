@@ -1,0 +1,42 @@
+#!/bin/bash
+set -e
+# Clone deployment repository.
+expect <<delim
+  set timeout 60
+  eval spawn git clone $PANTHEON_URL pantheon
+  set prompt ":|#|\\\$"
+  interact -o -nobuffer -re $prompt return
+  send "$PANTHEON_USER\r"
+expect eof
+delim
+
+# Set variables
+path=$(dirname "$0")
+base=$(cd $path/.. && pwd)
+pantheon=$base/pantheon
+git="( $base/pantheon && git $git_flags)"
+
+# Build the deployment artifact.
+rm $base/cnf/settings.php
+mv $base/cnf/pantheon.settings.php $base/cnf/settings.php
+$base/bin/rootcanal --prod
+
+# Add deployment artifact to the repository.
+rm -Rf $pantheon/*
+mv $base/www/* $pantheon/
+
+# configure git env
+git config --global user.email 'michelle@craychee.io'
+git config --global user.name 'craychee'
+
+# checkout publish branch
+(cd $pantheon ; git checkout -b publish)
+(cd $pantheon ; git branch -D master)
+(cd $pantheon ; git checkout -b master)
+
+# commit build
+(cd $pantheon ; git add -Af)
+(cd $pantheon ; git commit -m "Successful verified merge of $CIRCLE_PROJECT_USERNAME $CIRCLE_SHA1.")
+
+# push to Pantheon
+(cd $pantheon ; git push -f origin master)
