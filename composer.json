@@ -34,7 +34,7 @@
         "drupal/admin_menu": "~7.3@RC",
         "drupal/features": "~7.2",
         "drupal/module_filter": "~7.2@alpha",
-        "craychee/rootcanal": "0.1.*",
+        "craychee/rootcanal": "dev-master",
         "drush/drush": "6.*",
         "winmillwill/settings_compile": "~2.1.1"
     },
