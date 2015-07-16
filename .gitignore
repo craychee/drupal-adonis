@@ -6,6 +6,7 @@ vendor
 .env
 bin/*
 !bin/wrapper
+!bin/deploy
 
 # Ignore database artifacts
 *.sql*
