@@ -4,6 +4,9 @@ package = "Adonis install"
 core = "7.x"
 
 ; Contrib
+dependencies[] = admin_menu
+dependencies[] = module_filter
+dependencies[] = features
 
 ; Custom
 
