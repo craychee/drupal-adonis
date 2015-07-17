@@ -44,6 +44,6 @@ deployment:
       - composer install --no-dev --no-scripts
       - bin/acquia_deploy
       - mysqldump -u ubuntu adonis > adonis.sql
-      - scp adonis.sql $ACQUIA_URL:/mnt/gfs/home/adonis
+      - scp adonis.sql $ACQUIA_URL:/home/adonis
       - ssh -A $ACQUIA_URL 'drush @adonis.dev sqlc < adonis.sql'
       - ssh -A $ACQUIA_URL 'rm adonis.sql'
