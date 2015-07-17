@@ -37,7 +37,7 @@ deployment:
       - mysqldump -u ubuntu adonis > adonis.sql
       - mysql -u pantheon -p$PANTHEON_DB_PASS -h $PANTHEON_DB_HOST -P 17898 pantheon < adonis.sql
   aquia:
-    branch: master
+    branch: acquia
     commands:
       - echo -e "Host svn-4368.devcloud.hosting.acquia.com\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
       - echo -e "Host $ACQUIA_URL\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
