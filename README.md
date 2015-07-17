@@ -1,5 +1,5 @@
 # Drupal Adonis
-[![Build Status](https://travis-ci.org/craychee/drupal-adonis.svg?branch=meetup-mke-composer)](https://travis-ci.org/craychee/drupal-adonis)
+[![Build Status](https://travis-ci.org/craychee/drupal-adonis.svg?branch=meetup-mke-composer)](https://travis-ci.org/craychee/drupal-adonis) [![Circle CI](https://circleci.com/gh/craychee/drupal-adonis/tree/master.svg?style=svg)](https://circleci.com/gh/craychee/drupal-adonis/tree/master)
 
 ## These are not the droids you are looking for.
 
