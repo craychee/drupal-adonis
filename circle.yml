@@ -39,8 +39,8 @@ deployment:
   aquia:
     branch: acquia
     commands:
-      - echo -e "svn-4368.devcloud.hosting.acquia.com\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
-      - echo -e "$ACQUIA_URL\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
+      - echo -e "Host svn-4368.devcloud.hosting.acquia.com\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
+      - echo -e "Host $ACQUIA_URL\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
       - echo -e "machine github.com\n  login ci-user\n  password $ACQUIA_PASSWORD" >> ~/.netrc
       - composer install --no-dev --no-scripts
       - bin/acquia_deploy
