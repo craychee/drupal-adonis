@@ -33,6 +33,17 @@ deployment:
     branch: master
     commands:
       - composer install --no-dev --no-scripts
-      - bin/deploy
+      - bin/pantheon_deploy
       - mysqldump -u ubuntu adonis > adonis.sql
       - mysql -u pantheon -p$PANTHEON_DB_PASS -h $PANTHEON_DB_HOST -P 17898 pantheon < adonis.sql
+  aquia:
+    branch: acquia
+    commands:
+      - echo -e "svn-4368.devcloud.hosting.acquia.com\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
+      - echo -e "$ACQUIA_URL\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
+      - composer install --no-dev --no-scripts
+      - bin/acquia_deploy
+      - mysqldump -u ubuntu adonis > adonis.sql
+      - scp adonis.sql $ACQUIA_URL:/mnt/gfs/home/adonis
+      - ssh -A $ACQUIA_URL 'drush @adonis.dev sqlc < adonis.sql'
+      - ssh -A $ACQUIA_URL 'rm adonis.sql'

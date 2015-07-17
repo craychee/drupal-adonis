@@ -1,0 +1,30 @@
+#!/bin/bash
+set -e
+# Clone deployment repository.
+git clone adonis@svn-4368.devcloud.hosting.acquia.com:adonis.git adonis
+
+# Set variables
+path=$(dirname "$0")
+base=$(cd $path/.. && pwd)
+acquia=$base/acquia
+git="( $base/acquia && git $git_flags)"
+
+# Build the deployment artifact.
+rm $base/cnf/settings.php
+cp $base/cnf/deploy.settings.php $base/cnf/settings.php
+$base/bin/rootcanal --prod -d acquia/docroot
+
+# configure git env
+git config --global user.email 'michelle@craychee.io'
+git config --global user.name 'craychee'
+
+# checkout publish branch
+(cd $acquia ; git branch -D master)
+(cd $acquia ; git checkout -b master)
+
+# commit build
+(cd $acquia ; git add -Af docroot)
+(cd $acquia ; git commit -m "Successful verified merge of $CIRCLE_PROJECT_USERNAME $CIRCLE_SHA1.")
+
+# push to Acquia
+(cd $acquia ; git push -f origin master)
