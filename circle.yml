@@ -26,6 +26,7 @@ dependencies:
 
 test:
   override:
+      - bin/phpspec run spec/TitleValidatorSpec.php
       - bin/behat
 
 deployment:
