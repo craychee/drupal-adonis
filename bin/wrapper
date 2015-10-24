@@ -1,6 +1,10 @@
 #!/usr/bin/env php
 <?php
 
+if(!file_exists('modules/custom/validator/lib/TitleValidator.php')) {
+  copy('src/TitleValidator.php', 'modules/custom/validator/lib/TitleValidator.php');
+  echo "File TitleValidator copied to validator module\n\n";
+}
 if(!file_exists('cnf/config.yml')) {
   copy('cnf/config.yml.dist', 'cnf/config.yml');
   echo "File config.yml copied to cnf directory\n\n";

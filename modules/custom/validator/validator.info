@@ -1,0 +1,6 @@
+name = Validator
+description = Validation for Adonis Content Types
+core = 7.x
+package = Adonis Presentations
+
+files[]        = lib/TitleValidator.php

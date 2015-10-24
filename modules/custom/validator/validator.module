@@ -1,0 +1,19 @@
+<?php
+/**
+ * @file
+ */
+
+function validator_form_node_form_alter(&$form, &$form_state, $form_id) {
+  $form['#validate'][] = 'drupal_validation_invoke';
+}
+
+function drupal_validation_invoke($form, &$form_state) {
+  $title = $form_state['input']['title'];
+  $validator = new TitleValidator();
+  try {
+    $validator->checkClean($title);
+  }
+  catch (Exception $e) {
+    form_set_error('clean title', t('Nope.'));
+  }
+}
