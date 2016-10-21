@@ -12,7 +12,7 @@
             "package": {
                 "name": "pantheon-systems/drops-7",
                 "type": "drupal-core",
-                "version": "7.38",
+                "version": "7.51",
                 "source": {
                     "url": "https://github.com/pantheon-systems/drops-7.git",
                     "type": "git",
@@ -35,7 +35,7 @@
         "drupal/features": "~7.2",
         "drupal/module_filter": "~7.2@alpha",
         "craychee/rootcanal": "dev-master",
-        "drush/drush": "6.*",
+        "drush/drush": "8.*",
         "winmillwill/settings_compile": "~2.1.1"
     },
     "require-dev": {
@@ -44,8 +44,7 @@
         "phpspec/phpspec": "~2.0"
     },
     "config": {
-        "bin-dir": "bin",
-        "secure-http": false
+        "bin-dir": "bin"
     },
     "autoload": {
         "psr-0": {

@@ -1,7 +1,0 @@
-<?php
-/**
- * @file
- * Code for the News View feature.
- */
-
-include_once 'news_view.features.inc';
