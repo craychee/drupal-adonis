@@ -3,7 +3,7 @@ set -e
 # Clone deployment repository.
 expect <<delim
   set timeout 60
-  eval spawn git clone ssh://codeserver.dev.3fc62eba-28bb-4d55-b62b-d8ae7d34cdf1@codeserver.dev.3fc62eba-28bb-4d55-b62b-d8ae7d34cdf1.drush.in:2222/~/repository.git pantheon
+  eval spawn git clone ssh://codeserver.dev.d2ff0cb5-b313-4f66-940b-9d32b7d8a3a8@codeserver.dev.d2ff0cb5-b313-4f66-940b-9d32b7d8a3a8.drush.in:2222/~/repository.git pantheon
   sleep 1
   set prompt ":|#|\\\$"
   interact -o -nobuffer -re $prompt return
