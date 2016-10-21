@@ -35,7 +35,7 @@ deployment:
       - composer install --no-dev --no-scripts
       - bin/pantheon_deploy
       - mysqldump -u ubuntu adonis > adonis.sql
-      - mysql -u pantheon -p$PANTHEON_DB_PASS -h $PANTHEON_DB_HOST -P 31470 pantheon < adonis.sql
+      - mysql -u pantheon -p$PANTHEON_DB_PASS -h $PANTHEON_DB_HOST -P 20730 pantheon < adonis.sql
   aquia:
     branch: acquia
     commands:
