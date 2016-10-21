@@ -7,7 +7,7 @@ Feature: Installation Verification
   Scenario: Verify that the site and its variables are installed.
     Given I am on homepage
     Then I should see the text "Welcome to BAD-Camp"
-    And I should see the text "Good morning, BAD Camp!"
+    And I should see the text "Good afternoon, BAD Camp!"
 
   Scenario: Verify that user 1 can log into the site.
     Given I am not logged in

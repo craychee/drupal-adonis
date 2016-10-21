@@ -1,7 +1,7 @@
 <?php
 $enable = array(
   'site_frontpage' => 'node',
-  'site_slogan' => "Good morning, BAD Camp!"
+  'site_slogan' => "Good afternoon, BAD Camp!"
 );
 foreach ($enable as $var => $setting) {
   if (!is_numeric($var)) {
