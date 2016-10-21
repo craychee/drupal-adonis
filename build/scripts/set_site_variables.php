@@ -1,7 +1,7 @@
 <?php
 $enable = array(
   'site_frontpage' => 'node',
-  'site_slogan' => "Adonis: the prettiest Drupal that I can build."
+  'site_slogan' => "Good morning, BAD Camp!"
 );
 foreach ($enable as $var => $setting) {
   if (!is_numeric($var)) {

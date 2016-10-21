@@ -1,9 +1,0 @@
-name = Main Menu
-core = 7.x
-package = Adonis Example Feature
-dependencies[] = features
-dependencies[] = menu
-features[features_api][] = api:2
-features[menu_custom][] = main-menu
-features[menu_links][] = main-menu_news:news
-project path = sites/all/modules/features/
